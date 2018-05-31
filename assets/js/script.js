@@ -16,11 +16,31 @@
  		event.preventDefault();
  		
  	});
- 		$("#image").change(function(){
- 			var img = $(this).val();
- 			console.log(img);
- 			$(".create__image").children().attr('src', 'assets/images/squared/'+img);
- 		})
+
+	$("#image").change(function(){
+		var img = $(this).val();
+		console.log(img);
+		$(".create__image").children().attr('src', 'assets/images/squared/'+img);
+	})
+
+	$("#author").change(function(){
+		var author = $(this).val();
+		console.log(author);
+		$(".create__profile").children().attr('src', 'assets/images/profiles/'+author);
+	})
+
+	$(".create__submit").on('click',function(event){
+		event.preventDefault();
+		var followers 	= $("#followers").val();
+		var like 		= $("#likes").val();
+		var following 	= $("#following").val();
+	})
+
+
+	
+
+
+
  	
  	
 
