@@ -10,8 +10,11 @@
  		event.preventDefault();
  	});
 
- 	$('.card__follow-btn').on('click', function(){
+ 	$('.card__follow-btn').on('click', function(event){
  		$(this).toggleClass("card__follow-btn--following");
+ 		event.stopPropagation();
+ 		event.preventDefault();
+ 		
  	})
       
   });
