@@ -15,6 +15,16 @@
  		event.stopPropagation();
  		event.preventDefault();
  		
- 	})
+ 	});
+ 		$("#image").change(function(){
+ 			var img = $(this).val();
+ 			console.log(img);
+ 			$(".create__image").children().attr('src', 'assets/images/squared/'+img);
+ 		})
+ 	
+ 	
+
+
+
       
   });
