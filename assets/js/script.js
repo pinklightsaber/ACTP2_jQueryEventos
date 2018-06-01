@@ -1,5 +1,8 @@
  $(function() {
 
+ 	var img;
+ 	var author;
+
  	$('.card').on('click', function(){
  		$(this).toggleClass("card--open");
  	});
@@ -18,13 +21,13 @@
  	});
 
 	$("#image").change(function(){
-		var img = $(this).val();
+		img = $(this).val();
 		console.log(img);
 		$(".create__image").children().attr('src', 'assets/images/squared/'+img);
 	})
 
 	$("#author").change(function(){
-		var author = $(this).val();
+		author = $(this).val();
 		console.log(author);
 		$(".create__profile").children().attr('src', 'assets/images/profiles/'+author);
 	})
@@ -34,6 +37,19 @@
 		var followers 	= $("#followers").val();
 		var like 		= $("#likes").val();
 		var following 	= $("#following").val();
+		console.log(img);
+
+		$('ul > li:eq(0)')
+		.find('.card__img').attr('src', 'assets/images/squared/' + img );
+		$('ul > li:eq(0)')
+		.find('.card__profile').attr('src', 'assets/images/profiles/' + author);
+		$('ul > li:eq(0)')
+		.find('.social__number').eq(0).html(followers);
+		$('ul > li:eq(0)')
+		.find('.social__number').eq(1).html(likes);
+		$('ul > li:eq(0)')
+		.find('.social__number').eq(2).html(following);
+		
 	})
 
 
