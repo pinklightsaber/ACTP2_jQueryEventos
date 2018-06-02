@@ -14,7 +14,10 @@
  	});
 
  	$('.card__follow-btn').on('click', function(event){
- 		$(this).toggleClass("card__follow-btn--following");
+ 		$(this)
+ 			.toggleClass("card__follow-btn--following")
+ 			.text('Siguiendo');
+
  		event.stopPropagation();
  		event.preventDefault();
  		
