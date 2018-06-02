@@ -35,7 +35,7 @@
 	$(".create__submit").on('click',function(event){
 		event.preventDefault();
 		var followers 	= $("#followers").val();
-		var like 		= $("#likes").val();
+		var likes 		= $("#likes").val();
 		var following 	= $("#following").val();
 		console.log(img);
 
@@ -49,6 +49,8 @@
 		.find('.social__number').eq(1).html(likes);
 		$('ul > li:eq(0)')
 		.find('.social__number').eq(2).html(following);
+
+		$('input[type="text"]').val('');
 		
 	})
 
